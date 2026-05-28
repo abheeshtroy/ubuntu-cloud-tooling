@@ -1,0 +1,26 @@
+# Ubuntu Cloud Tooling — example system configuration
+# Compatible with Ubuntu 22.04 LTS (Jammy) and 24.04 LTS (Noble)
+
+system:
+  name: "dev-workstation"
+  ubuntu_version: "22.04"
+  update_cache: true
+  upgrade: false
+
+apt_sources:
+  - name: nodesource
+    uri: "https://deb.nodesource.com/node_20.x"
+    distribution: "jammy"
+    components:
+      - main
+    key_url: "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key"
+    enabled: true
+
+packages:
+  - name: curl
+  - name: git
+  - name: htop
+  - name: vim
+  - name: build-essential
+  - name: python3-pip
+  - name: nodejs
