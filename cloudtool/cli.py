@@ -151,7 +151,7 @@ def build_parser() -> argparse.ArgumentParser:
     # generate
     generate_parser = subparsers.add_parser(
         "generate",
-        help="Generate a config YAML from a natural language description (uses Gemini AI)",
+        help="Generate a config YAML from a natural language description", 
     )
     generate_parser.add_argument("prompt", type=str, help="Natural language environment description")
     generate_parser.add_argument(
